@@ -72,3 +72,7 @@ exports.manage_post = function(post, cb) {
 		cb(0);
 	}
 };
+
+exports.updatetime = 1000;
+exports.title = 'Transmission';
+exports.columns = 6;
