@@ -39,14 +39,14 @@ script(type="text/javascript").
 
 	$(document).ready(function () {
 		$('##{user_widget.id_html} .btnTransPlay').click(function () {
-		$.sendPostDataToWidget(socket, #{user_widget.id}, '#{sid}', { sta: true });
+		$.sendPostDataToWidget(socket, #{user_widget.id}, '#{username}', { sta: true });
 		});
 
 		$('##{user_widget.id_html} .btnTransStop').click(function () {
-			$.sendPostDataToWidget(socket, #{user_widget.id}, '#{sid}', { sto: true });
+			$.sendPostDataToWidget(socket, #{user_widget.id}, '#{username}', { sto: true });
 		});
 
 		setTimeout(function () {
-			$.startUpdatingWidgetHtml(socket, #{user_widget.id}, '#{sid}', callbackTransmissionFunc, null);
+			$.startUpdatingWidgetHtml(socket, #{user_widget.id}, '#{username}', callbackTransmissionFunc, null);
 		}, #{user_widget.widget.updatetime});
 	});
